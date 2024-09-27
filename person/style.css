@@ -1,6 +1,6 @@
 body {
-    background-color: #112240;
-    color: #fff;
+    background-color: #233554;
+    color: #a8b2d1;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     line-height: 2em;
@@ -15,6 +15,9 @@ section {
     min-height: 100vh;
 }
 
+h1 {
+    color: #e6f1ff;
+}
 
 .container {
     display: flex;
@@ -50,15 +53,19 @@ section {
     margin: auto;
     overflow: none;
     z-index: 1000;
-    background-color: rgba(43, 43, 43, 0.9);
+    background-color: rgba(10, 25, 47, 0.9);
     text-transform: uppercase;
     padding: 0;
     margin: 0;
-    color:white
+    color:#e6f1ff;
 }
 
 #GOAT {
-    color: black;
+    color: #e6f1ff;
+}
+
+strong {
+    color: #e6f1ff;
 }
 
 .image {
@@ -73,8 +80,7 @@ section {
 
 
 .sport {
-    float: right;
-    
+    float: right;    
 }
 
 
