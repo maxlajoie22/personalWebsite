@@ -2,7 +2,7 @@
     --container-bg-color: #333;
     --left-bg-color: rgba(35,53,84,0.9); /* .8 */
     --left-button-hover-color: rgba(10, 25, 47,0.3); /* .3 */
-    --right-bg-color: rgba(35,53,84,0.9);
+    --right-bg-color: rgba(35,53,84,0.95);
     --right-button-hover-color: rgba(10, 25, 47,0.3);
     --hover-width: 75%;
     --other-width: 25%;
@@ -48,12 +48,14 @@ h1 {
 
 .split.left .button:hover {
     background-color: var(--left-button-hover-color);
-    border-color: var(--left-button-hover-color);
+    border-color: #64ffda;
+    color:  #64ffda;
 }
 
 .split.right .button:hover {
     background-color: var(--right-button-hover-color);
-    border-color: var(--right-button-hover-color);
+    border-color: #64ffda;
+    color:  #64ffda;
 }
 
 .container {
