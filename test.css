@@ -1,0 +1,31 @@
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 0.25rem;  /* same as Tailwind's ml-1 */
+    margin-top: 2rem;      /* same as Tailwind's mt-8 */
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-icons li {
+    margin-right: 1.25rem;  /* same as Tailwind's mr-5 */
+    flex-shrink: 0;
+    font-size: 0.75rem;     /* same as Tailwind's text-xs */
+  }
+  
+  .social-icons a {
+    display: block;
+    color: #94a3b8; /* Tailwind's slate-400 */
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #e2e8f0; /* Tailwind's slate-200 or white if you prefer */
+  }
+  
+  .social-icons svg {
+    width: 1.5rem;  /* Tailwind's w-6 */
+    height: 1.5rem; /* Tailwind's h-6 */
+    fill: currentColor;
+  }
