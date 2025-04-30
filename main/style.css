@@ -1,145 +1,109 @@
-:root {
-    --container-bg-color: #333;
-    --left-bg-color: rgba(35,53,84,0.9); /* .8 */
-    --left-button-hover-color: rgba(10, 25, 47,0.3); /* .3 */
-    --right-bg-color: rgba(35,53,84,0.95);
-    --right-button-hover-color: rgba(10, 25, 47,0.3);
-    --hover-width: 75%;
-    --other-width: 25%;
-    --speed: 1000ms;
-}
-
-html, body {
+body {
+    background-image: linear-gradient(to right,#0a192f,#112240);
+    color: #a8b2d1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 2em;
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    overflow-x: hidden;
 }
 
-h1 {
-    font-size: 3.5rem;
-    color: #e6f1ff;
-    position: absolute;
-    left: 50%;
-    top: 25%;
-    transform: translateX(-50%);
-    white-space: nowrap;
+.left { 
+    position:fixed;
+    width:55%; 
+    padding: 10px;
+    margin: 100px auto;
 }
 
-.button {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 42%;
-    height: 2.5rem;
-    padding-top: 1.3rem;
-    width: 10rem;
-    border-radius: 2rem;
-    text-align: center;
+.text{
+    margin-left:100px;
+}
+
+.text h1 {
     color: #e6f1ff;
-    border: #e6f1ff solid 0.2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 70px;
+} 
+
+.text h2 {
+    color: #ccd6f6;
+    font-size: 25px;
+}
+
+.text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px; 
+}
+
+.text ul li {
+    display: inline;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.socials li a img {
+    width: 28px;
+    height: 28px; 
+    margin: 5px 32px 0px 0px;
+    filter: brightness(0) invert(0.65);
+}
+
+.socials li a img:hover {
+    filter: brightness(0) invert(0.85); 
+}
+
+
+.right { 
+    float:right;
+    width:45%; 
+    padding: 10px;
+    margin: 100px auto;
+}
+
+.myProjects {
+    color: #e6f1ff;
+    padding: 0px;
+    margin: 0px;
+    font-size: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    position: absolute;
+    top: 30px;
+}
+
+.box {
+    width:500px;
+    height: 250px;
+    margin: 10px 0px;
+    transition: 1s;
+}
+
+.box:hover {
+    transform: scale(1.2);
+    background: #233554;
+    box-shadow: 2px 2px 2px #64ffda;
+    font-size: scale(1.3);
+}
+
+.resume {
+    color: #ccd6f6;
+    padding: 15px 0px 0px 0px;
+    margin: 0;
+    font-size: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    bottom : 0px;
     text-decoration: none;
-    transform: translateX(-50%);
 }
-
-.split.left .button:hover {
-    background-color: var(--left-button-hover-color);
-    border-color: #64ffda;
-    color:  #64ffda;
-}
-
-.split.right .button:hover {
-    background-color: var(--right-button-hover-color);
-    border-color: #64ffda;
-    color:  #64ffda;
-}
-
-.container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: var(--container-bg-color);
-}
-
-.split {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.split.left {
-    left: 0;
-    background: url('../img/notredame.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.split.left:before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: var(--left-bg-color);
-}
-
-.split.right {
-    right: 0;
-    background: url('../img/programmer.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.split.right:before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: var(--right-bg-color);
-}
-
-.split.left, .split.right, .split.left:before, .split.right:before {
-    transition: var(--speed) all ease-in-out;
-}
-
-.hover-left .left {
-    width: var(--hover-width);
-}
-
-.hover-left .right {
-    width: var(--other-width);
-}
-
-.hover-left .right:before {
-    z-index: 2;
-}
-
-.hover-right .right {
-    width: var(--hover-width);
-}
-
-.hover-right .left {
-    width: var(--other-width);
-}
-
-.hover-right .left:before {
-    z-index: 2;
-}
-
-@media(max-width: 800px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .button {
-        width: 12rem;
-    }
-}
-
-@media(max-height: 700px) {
-    .button {
-        top: 70%;
-    }
+.resume:hover {
+    color: #64ffda;
 }
